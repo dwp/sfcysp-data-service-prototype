@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="altformatyes" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div>
+
+            <h1 class="govuk-heading-l">Send forecast in large print</h1>
+          </div>
+          <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Tell the customer
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        I'll post your State Pension forecast out to you in large print.
+        <br>
+        <br>
+
+        Do you need size 16, 18, 24 or 28 font?
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-inset-text">
+    <b>FPC1 process:</b> Add customer's title, name, National Insurance number, contact number, date of birth and address.
+    <br>
+    <br>
+    Select <b>Call Centre</b> as the department and <b>Alternative format</b> as the category.
+    <br>
+    <br>
+    Add <b>Large print</b> and <b>16, 18, 24</b> or <b>28 font</b> in the <b>Notes</b> box.
+    </div>
+    <br>
+    <div>
+<a href="NINOstartAF">
+      <button class="govuk-button" data-module="govuk-button">
+    Back to start
+  </button>
+      </a>
+</div>
+  </div>
+</div>
+{% endblock %}

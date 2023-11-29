@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+          <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+          <br>
+        <div class="govuk-panel govuk-panel--confirmation" style="background-color:#1d70b8;">
+    <h1 class="govuk-panel__title">
+      Customer found
+    </h1>
+    <div class="govuk-panel__body">
+      John Smith
+    </div>
+    <div class="govuk-panel__body">
+      Born on 15 May 1987
+    </div>
+  </div>
+
+  <br><br>
+
+<h2 class="govuk-heading-m">Customer record matches NIRS</h2>
+
+  <form class="form" action="/NameNINO-answerAF" method="post">
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+idPrefix: "Name-NINOAF",
+name: "Name-NINOAF",
+fieldset: {
+legend: {
+isPageHeading: true,
+classes: "govuk-fieldset__legend--l"
+
+}
+},
+
+items: [
+{
+value: "Yes",
+text: "Yes",
+checked: checked("Name-NINOAF", "/Alternative-formats/how_can_helpAF")
+},
+{
+value: "No",
+text: "No",
+checked: checked("Name-NINOAF", "/Alternative-formats/NINOstartAF")
+}
+
+]
+}) }}
+
+
+<br><br>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+<br>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

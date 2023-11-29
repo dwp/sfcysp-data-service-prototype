@@ -1,0 +1,97 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-l" style="margin-bottom: 30px">
+        Check forecast details
+      </h1>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-3">
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Customer full name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John Eduardo Smith
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+            11 Brownlie Street<br>
+            Glasgow<br>
+  G42 9BT<br>
+  United Kingdom
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                        </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Forecast
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £159.55 a week<br>
+            693.76 a month<br>
+      £8325.09 a year
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            COPE estimate
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £0.00
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+      </div>
+    </div>
+        <br>
+
+                  <a class="govuk-link" data-module="govuk-link">
+                    Send forecast via GOV.UK Notify
+                  </a>
+
+<br>
+<br>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Download forecast as PDF
+        </button>
+
+
+
+
+        </main>
+      </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/Alternative-formats/own_forecastAF">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+      <form class="form" action="/addresstypeCIS-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "addresstype-CISAF",
+    name: "addresstype-CISAF",
+    fieldset: {
+      legend: {
+        text: "Where do you want us to send your State Pension forecast?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+
+      }
+    },
+
+    items: [
+    {
+      value: "Home address",
+      text: "Home address",
+      checked: checked("addresstypeCISAF", "Alternative-formats/CISaddress")
+  },
+  {
+      value: "Correspondence address",
+      text: "Correspondence address",
+      checked: checked("addresstyprCISAF", "Alternative-formats/postcodecorresAF")
+  },
+  {
+    value: "Home and correspondence address",
+    text: "Home and correspondence address",
+    checked: checked("addresstypeCISAF", "Alternative-formats/CISaddresshomeandcorres")
+}
+    ]
+  }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

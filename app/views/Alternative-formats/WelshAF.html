@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+      <form class="form" action="/WelshAF-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "welsh-formatAF",
+    name: "welsh-formatAF",
+    fieldset: {
+      legend: {
+        text: "Do you need your State Pension forecast in Welsh?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+
+      }
+    },
+
+    items: [
+    {
+      value: "Yes",
+      text: "Yes",
+      checked: checked("welsh-formatAF", "Alternative-formats/previewAF")
+  },
+  {
+      value: "No",
+      text: "No",
+      checked: checked("welsh-formatAF", "Alternative-formats/previewenglishAF")
+  }
+
+    ]
+  }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

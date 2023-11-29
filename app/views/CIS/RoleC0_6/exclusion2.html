@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Customer over State Pension age
+      </h1>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            For the customer
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+    I can see you are over State Pension age. To check your State Pension, you need to call the pension centre. I’ve got the number here for you.
+            </p>
+
+
+        </div>
+      </div>
+
+      <div class="govuk-inset-text">
+<span class="govuk-body govuk-!-font-weight-bold">Inform the customer about one of the Pension centre telephone numbers:
+<br>   <br>            UK (Excluding Northern Ireland): 0800 731 7898 <br>
+  Text phone: 0800 731 7339
+  <br> <br>              UK (Excluding Northern Ireland): 0800 731 7898 <br>
+    Text phone: 0800 731 7339
+    <br>  <br>  Northern Ireland: 0808 100 2658 <br>
+      Text phone: 0808 100 2198
+
+
+
+
+</div>
+<br>
+<h3 class="govuk-heading-m">
+     Do you want to send a letter to the customer?
+   </h3>
+   <div class="govuk-radios govuk-radios--inline">
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+       <label class="govuk-label govuk-radios__label" for="changed-name">
+         Yes
+       </label>
+     </div>
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+       <label class="govuk-label govuk-radios__label" for="changed-name-2">
+         No
+       </label>
+     </div>
+   </div>
+<br><br>
+      <!-- <div class="govuk-inset-text">
+Customers can call HMRC on 0800 200 300 055 if needed.
+</div> -->
+<br>
+<form class="form" action="confirmation" method="post">
+<button class="govuk-button" data-module="govuk-button">
+  Finish
+</button>
+</form>
+<br>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

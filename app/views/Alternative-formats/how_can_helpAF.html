@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/Alternative-formats/CIScheckAF">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+  <form class="form" action="/howcanhelpAF-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "how_can_helpAF",
+    name: "how_can_helpAF",
+    fieldset: {
+      legend: {
+        text: "How can I help you today?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+
+      }
+    },
+
+    items: [
+    {
+      value: "State Pension forecast",
+      text: "State Pension forecast",
+      checked: checked("how_can_helpAF", "Alternative-formats/altformat")
+  },
+  {
+      value: "Forecast enquiry",
+      text: "Forecast enquiry",
+      checked: checked("how_can_helpAF", "Alternative-formats/forecastAF")
+  }
+
+    ]
+  }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

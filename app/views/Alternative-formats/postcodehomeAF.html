@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/Alternative-formats/addresstypeCIS">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <form class="form" action="resultAB24homeAF" method="post">
+      <div class="govuk-form-group">
+        <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+             What is your home postcode?
+          </label>
+        </h1>
+        <br>
+        <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" style="text-transform: uppercase">
+        <br><br><a href="overseashomeAF" class="govuk-link">They live overseas</a>
+            </div>
+
+      <br><br>
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+  </form>
+<br><br>
+<div>
+
+<!-- <form class="form" action="resultG42">
+<button class="resultWS13" style="background-color:white; border-style:none; float:left; color:#BEBEBE">
+  g
+</button>
+</form>
+<form class="form" action="resultHU1">
+<button class="resultWS13" style="background-color:white; border-style:none; float: left; color:#BEBEBE">
+  h
+</button>
+</form>
+<form class="form" action="resultHU12">
+<button class="resultWS13" style="background-color:white; border-style:none; float:left; color:#BEBEBE">
+  H
+</button>
+</form>
+<form class="form" action="resultWS13">
+<button class="resultWS13" style="background-color:white; border-style:none; color:#BEBEBE">
+  w
+</button>
+</form> -->
+</div>
+    </div>
+  </div>
+
+{% endblock %}

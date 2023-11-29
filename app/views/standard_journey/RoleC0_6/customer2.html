@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-l" style="margin-bottom:15px">
+      Does the customer have a legal representative recorded in Searchlight
+      </h1>
+
+  <form class="form" action="legrep" method="post">
+        <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="main" name="type" type="radio" value="main">
+                <label class="govuk-label govuk-radios__label" for="main">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="third" name="type" type="radio" value="third">
+                <label class="govuk-label govuk-radios__label" for="third">
+                No
+                </label>
+
+              </div>
+
+            </div>
+<br><br><br>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

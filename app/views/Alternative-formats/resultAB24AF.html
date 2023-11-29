@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-l" style="margin-bottom: 30px">
+        Can I take the first line of your address?
+      </h1>
+
+  <p class="govuk-body" style="margin-bottom: 10px"><span class="govuk-!-font-weight-bold" ">Postcode:</span>B79 7JT</p>
+<a href="postcodeAF" class="govuk-link">Change</a>
+<br><br><br>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select an address
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>39 addresses found</option>
+          <option value=""> 1 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 3 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 5 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 7 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 9 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 11 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 15 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 17 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 19 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 21 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 23 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 25 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 27 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 29 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 31 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 33 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 35 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 37 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 39 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 2 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 4 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 6 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 8 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 10 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 12 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 14 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 16 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 18 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 20 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 22 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 24 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 26 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 28 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 30 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 32 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 34 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 36 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 38 SESSION ROAD, TAMWORTH, B79 7JT</option>
+          <option value=""> 40 SESSION ROAD, TAMWORTH, B79 7JT</option>
+        </select>
+      </div>
+
+
+<br><br>
+<form class="form" action="WelshAF" method="post">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+<a href="edit-newAF" class="govuk-link">Address not on the list</a>
+    </div>
+  </div>
+
+{% endblock %}

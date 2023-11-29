@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+
+        <a href="/nino" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+     <form class="form" action="/confirm_answer" method="post">
+     <div class="govuk-form-group">
+       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+           <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+           <br>
+           <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Confirm details
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      Customer name: John Eduardo Smith
+      <br>
+      Date of Birth: 15 May 1987
+    </p>
+  </div>
+</div>
+         <h2 class="govuk-heading-m">Use this name and date of birth</h2>
+
+         {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+     {{ govukRadios({
+       classes: "govuk-radios--inline",
+     idPrefix: "confirm-customer",
+     name: "confirm-customer",
+     fieldset: {
+     legend: {
+           isPageHeading: true,
+       classes: "govuk-fieldset__legend--l"
+     }
+     },
+     items: [
+     {
+     value: "yes",
+     text: "Yes"
+     },
+     {
+     value: "no",
+     text: "No"
+}
+]
+
+
+     }) }}
+                    </div>
+           </div>
+
+     {% from "govuk/components/button/macro.njk" import govukButton %}
+
+     {{ govukButton({
+       text: "Continue"
+     }) }}
+
+
+
+{% endblock %}

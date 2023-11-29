@@ -1,0 +1,132 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="altformat" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div>
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          How do you want us to send your State Pension forecast?
+        </h1>
+      </legend>
+      <div id="contact-hint" class="govuk-hint">
+        Select one option
+      </div>
+
+            </div>
+
+
+                <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-print" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-print">
+                <label class="govuk-label govuk-radios__label" for="contact-print">
+                  Print size and colour
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-print">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact-large" name="contact-large" type="checkbox">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact-large">
+                    Large print
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact-colour" name="contact-colour" type="checkbox">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact-colour">
+                    Coloured paper
+                  </label>
+                </div>
+              </div>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+          <label class="govuk-label govuk-radios__label" for="contact-3">
+            Audio format (cassette, CD, DVD or MP3)
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              Mobile phone number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+          </div>
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+          <label class="govuk-label govuk-radios__label" for="contact-3">
+            Braille
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              Mobile phone number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+          </div>
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+          <label class="govuk-label govuk-radios__label" for="contact-3">
+            British Sign Language (Mpeg or DVD)
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+              Mobile phone number
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+          </div>
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-4">
+          <label class="govuk-label govuk-radios__label" for="contact-4">
+            Something else
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-other">
+            Please specify
+            </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-contact-4" name="contact-contact-4" type="tel" autocomplete="tel">
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+
+
+
+    </div>
+    <br>
+    <div>
+      <br>
+      
+        <a href="largeprint">
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+      </a>
+</div>
+  </div>
+</div>
+{% endblock %}

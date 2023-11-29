@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+
+        <a href="/CIS/nino" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <form class="form" action="/confirm_answer" method="post">
+     <div class="govuk-form-group">
+       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+           <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+           <h1 class="govuk-fieldset__heading">
+             Are these details correct?
+           </h1>
+         </legend>
+
+
+
+         <div class="govuk-inset-text">
+           <p><span class="govuk-body govuk-!-font-weight-bold">Name:</span> John Eduardo Smith</p>
+           <p><span class="govuk-body govuk-!-font-weight-bold">Date of Birth:</span> 15 May 1987</p>
+         </div>
+         <br><br>
+
+
+         {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+     {{ govukRadios({
+       classes: "govuk-radios--inline",
+     idPrefix: "confirm-customer",
+     name: "confirm-customer",
+     fieldset: {
+     legend: {
+           isPageHeading: true,
+       classes: "govuk-fieldset__legend--l"
+     }
+     },
+     items: [
+     {
+     value: "yes",
+     text: "Yes"
+     },
+     {
+     value: "no",
+     text: "No"
+}
+]
+
+
+     }) }}
+                    </div>
+           </div>
+
+
+
+
+     </div>
+
+     {% from "govuk/components/button/macro.njk" import govukButton %}
+
+     {{ govukButton({
+       text: "Continue"
+     }) }}
+
+
+
+{% endblock %}

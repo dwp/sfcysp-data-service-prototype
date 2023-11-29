@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <a href="/CIS/own_forecast" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/current_address" method="post">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+          <h1 class="govuk-fieldset__heading">
+            Is this address correct?
+          </h1>
+        </legend>
+
+
+
+        <div class="govuk-inset-text">
+          <p>38 Session Road<br>
+          Tamworth<br>
+          B79 7JT<br>
+          United Kingdom</p>
+        </div>
+      <br>
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+      idPrefix: "address-correct",
+      name: "address-correct",
+      fieldset: {
+      legend: {
+            isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "correct-address",
+      text: "Yes"
+      },
+      {
+      value: "incorrect-address",
+      text: "No"
+ }
+ ]
+
+
+      }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+{% endblock %}

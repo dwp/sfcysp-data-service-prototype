@@ -1,0 +1,91 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="nino_altformat" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/altformat-answer" method="post">
+      <div>
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          It's a printed forecast we post out to you. Can we adjust something to make it accessible for you, for example large print or audio format?
+        </h1>
+      </legend>
+      </div>
+
+              </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="accessibilityNeeds" name="accessibilityNeeds" type="radio" value="yes" data-aria-controls="conditional-accessibilityNeeds">
+                <label class="govuk-label govuk-radios__label" for="accessibilityNeeds">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-accessibilityNeeds">
+                  <div class="govuk-form-group">
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="alternativeFormat1" name="alternativeFormat" type="radio" value="audio-format">
+                  <label class="govuk-label govuk-radios__label" for="alternativeFormat1">
+                    Audio format (cassette, CD, DVD or MP3)
+                  </label>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="alternativeFormat2" name="alternativeFormat" type="radio" value="braille">
+                  <label class="govuk-label govuk-radios__label" for="alternativeFormat2">
+                    Braille
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="alternativeFormat3" name="alternativeFormat" type="radio" value="large-print">
+                  <label class="govuk-label govuk-radios__label" for="alternativeFormat-3">
+                    Large print (standard 16 font)
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="alternativeFormat4" name="alternativeFormat" type="radio" value="other-adjustments-requested">
+                  <label class="govuk-label govuk-radios__label" for="alternativeFormat-4">
+                    Other adjustments requested
+                  </label>
+                </div>
+
+
+
+              </div>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="accessibilityNeeds-2" name="accessibilityNeeds" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="accessibilityNeeds-2">
+            No
+          </label>
+        </div>
+
+
+
+    </div>
+    <br>
+    <br>
+
+
+        <div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            </div>
+            </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+  <a href="/CIS/address/postcodeResultsassistance" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      What type of address is this?
+      </h1>
+
+  <form class="form" action="customerType" method="post">
+        <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="main" name="type" type="radio" value="main">
+                <label class="govuk-label govuk-radios__label" for="main">
+                  New Residential address
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="third" name="type" type="radio" value="third">
+                <label class="govuk-label govuk-radios__label" for="third">
+                Correspondence address
+                </label>
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+        Access <span class="govuk-body govuk-!-font-weight-bold">Searchlight</span> using the customer's National insruance number. <br>
+        Check whether the customer has a legal representative.
+        </div> -->
+              </div>
+
+            </div>
+<br>
+<br>
+<br>
+<<a href="#"></a>" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Continue
+
+</a>
+</form>
+</div>
+</div>
+
+
+
+
+{% endblock %}

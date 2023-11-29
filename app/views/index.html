@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+
+  <div class="govuk-header__content">
+
+  <a href="/" class="govuk-header__link govuk-header__link--service-name">
+    Support for Check your State Pension forecast
+  </a>
+
+
+  </div>
+
+
+
+</header>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-xl">
+  sfcyspf-prototype
+  </h1>
+
+  <h2 class="govuk-heading-m">
+    Current Journey
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>
+  <p><a href="/standard_journey/nino">Journey as of November 2022</a></p>
+    </li>
+    </ul>
+
+  <h2 class="govuk-heading-m">
+    Current Screens for testing
+    </h2>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+
+            <h2 class="govuk-heading-m">Letters</h2>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+          <p><a href="letters/VNICS/menu">VNICS</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+          <p><a href="/letters/index2">Notify</a></p>
+
+
+
+          <h2 class="govuk-heading-m">Alternative formats</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+          <p><a href="/Altformats_current/nino_altformat">Alternative format exclusions</a></p>
+          </li>
+          </ul>
+
+
+          <h2 class="govuk-heading-m">Isle of Man</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+        <p><a href="IoM/nino">Isle of Man exclusion</a></p>
+          </li>
+          </ul>
+            <br>
+
+
+          <h2 class="govuk-heading-m">Missing COPE</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+        <p><a href="Missing_COPE/ninoCOPE">Missing COPE take customer details</a></p>
+          </li>
+          </ul>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+        <p><a href="Missing_COPE2/ninoCOPE2">Record needs a manual COPE calculation</a></p>
+          </li>
+          </ul>
+
+
+
+          <h2 class="govuk-heading-m">CIS journeys</h2>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+        <p><a href="CIS_journey/NINOstart">Name and DOB</a></p>
+          </li>
+          </ul>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+        <p><a href="Alternative-formats/NINOstartAF">Address and alternative formats</a></p>
+            <br>
+
+
+
+
+
+            <h2 class="govuk-heading-m">Something's gone wrong</h2>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="somethings_gone_wrong/NINOstart_sgw1">Current amount is greater than the forecast amount</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="somethings_gone_wrong/NINOstart_sgw2">Customer has 10 or more qualifying years and current amount is 0</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="somethings_gone_wrong/NINOstart_sgw3">Current amount is greater than the maximum amount</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="somethings_gone_wrong/NINOstart_sgw4">Customer has less than 0 qualifying years</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="somethings_gone_wrong/NINOstart_sgw5">Forecast amount is greater than the maximum amount</a></p>
+            </li>
+            </ul>
+
+              <br>
+
+ <h1 class="govuk-heading-xl">Previous Versions</h1>
+
+
+                <ul class="govuk-list govuk-list--bullet">
+                <li>
+              <p><a href="CIS_versioning">CIS Journeys</a></p>
+                </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                <li>
+              <p><a href="Exceptions_versioning">Variable User Journeys</a></p>
+                </li>
+                </ul>
+
+                <br>
+
+
+{% endblock %}

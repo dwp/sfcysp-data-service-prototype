@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="altformat">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+    
+      <form class="form" action="/whichformat-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "which-format",
+    name: "which-format",
+    fieldset: {
+      legend: {
+        text: "It's a printed letter we post out to you. Do you need a different format?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+
+      }
+    },
+    items: [
+    {
+      value: "Yes",
+      text: "Yes",
+      checked: checked("which-format", "altformatyes")
+  },
+  {
+      value: "No",
+      text: "No",
+      checked: checked("which-format", "own_forecastAF")
+  }
+
+    ]
+  }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

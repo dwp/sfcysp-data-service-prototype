@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+
+    <a href="/route" class="govuk-back-link">Back</a>
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/format-answer" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+         <h1 class="govuk-fieldset__heading">
+                        Please select an option?
+                      </h1>
+
+        {{ govukRadios({
+          idPrefix: "which-format",
+    name: "which-format",
+    fieldset: {
+      legend: {
+        text: "Which format do you need?"
+      }
+    },
+    items: [
+      {
+        value: "print",
+        text: "Print size & colour"
+      },
+      {
+        value: "Braille",
+        text: "Braille"
+      },
+      {
+        value: "bsl",
+        text: "British Sign Language"
+      },
+      {
+        value: "audio-format",
+        text: "Audio format"
+      },
+      {
+        value: "other",
+        text: "Something else"
+      }
+    ]
+  }) }}
+
+<br>
+<br>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+
+
+
+
+
+
+{% endblock %}

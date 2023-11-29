@@ -1,0 +1,29 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          The letter will be sent by Notify
+        </h1>
+      </div>
+<br>
+
+<form class="form" action="NINOstart" method="post">
+          <button class="govuk-button" data-module="govuk-button">
+            Back to start
+          </button>
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

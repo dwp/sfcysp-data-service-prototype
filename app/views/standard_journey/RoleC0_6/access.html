@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="customer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+            <h1 class="govuk-fieldset__heading">
+            It’s a printed forecast we post out to you. Can we adjust something to make it accessible for you, for example large print or audio format?
+            </h1>
+          </legend>
+          <!-- <div id="contact-hint" class="govuk-hint">
+            For example, larger print
+          </div> -->
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="access-yes" name="access" type="radio" value="yes" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="access-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-checkboxes">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-radios__label" for="waste">
+                      Audio format (cassette, CD, DVD or MP3)
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-radios__label" for="waste-3">
+                      Braille
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-radios__label" for="waste-3">
+                      Large print (standard 16 font)
+                    </label>
+                  </div>
+                  <!-- <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Welsh language
+                    </label>
+                  </div> -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-radios__label" for="waste-3">
+                      Other adjustments requested
+                    </label>
+                  </div>
+                </div>
+
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="access-no" name="access" type="radio" value="no" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="access-no">
+              No
+              </label>
+            </div>
+
+
+          </div>
+
+        </fieldset>
+      </div>
+
+
+<br><br>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

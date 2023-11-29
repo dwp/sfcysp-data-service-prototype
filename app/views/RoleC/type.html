@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Why is the customer calling?
+      </h1>
+      <div id="sign-in-hint" class="govuk-hint">
+      This record has a missing COPE check
+    </div>
+
+<form class="form" action="exclusion" method="post">
+      <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="main" name="customer" type="radio" value="main">
+              <label class="govuk-label govuk-radios__label" for="main">
+                A paper forecast
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="2" name="customer" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="2">
+                Forecast enquiry
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+        For example, voluntary contributions
+       </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="3" name="customer" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="3">
+                Been online and seen a message about a HMRC update
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+         Message says ‘unable to calculate your forecast’ or are ‘still updating record’
+       </div>
+            </div>
+          </div>
+<br><br><br>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<header class="govuk-header " role="banner" data-module="govuk-header">
+
+  <div class="govuk-header__content">
+
+  <a href="/" class="govuk-header__link govuk-header__link--service-name">
+    Support for Check your State Pension forecast
+  </a>
+
+
+  </div>
+
+
+
+</header>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-xl">
+  sfcyspf-prototype
+  </h1>
+
+
+            <br>
+
+
+
+
+
+            <h2 class="govuk-heading-m">Letters for testing</h2>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="/letters/VNICS/VNICS1">Letter with gaps (scenario not making NI contributions)</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="/letters/VNICS/VNICS2">Letter with undecided years (scenrio not making NI contributions)</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="/letters/VNICS/VNICS3">Letter with gaps and undecided years (scenario not making NI contributions)</a></p>
+            </li>
+            </ul>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <p><a href="/letters/VNICS/VNICS4">Letter with gaps (scenario where all gaps need to be paid to reach a State Pension less than maximum SP)</a></p>
+            </li>
+            </ul>
+
+
+
+{% endblock %}

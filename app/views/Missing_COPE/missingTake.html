@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-l">NI number: ER 47 00 00 A</span>
+      <h1 class="govuk-heading-xl">
+        Missing COPE take customer details
+      </h1>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Tell the customer
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            I can see that HMRC are checking your National Insurance record. This is to ensure your pension forecast is accurate and up to date.
+  <p class="govuk-notification-banner__heading">
+  There’s nothing to worry about, HMRC do regular updates on National Insurance records.
+  <p>
+    <p class="govuk-notification-banner__heading">
+  Your forecast will be sent out in the next 2-3 weeks.
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-inset-text">
+Customers can call HMRC on 0800 200 300 055 if needed.
+</div> -->
+<div class="govuk-inset-text">
+  <span class="govuk-body govuk-!-font-weight-bold">FPC1 process:</span> Add customer’s title, name, National Insurance number, contact number, date of birth and address.
+  <br>
+  Select<span class="govuk-body govuk-!-font-weight-bold"> Digital</span> as the department and <span class="govuk-body govuk-!-font-weight-bold">Missing COPE</span> as the category. Select <span class="govuk-body govuk-!-font-weight-bold">Missing COPE Pre 2025</span> and <span class="govuk-body govuk-!-font-weight-bold">Yes</span> in the dropdown box.
+  <br>
+  <br>
+  Add HMRC’s completion date <span class="govuk-body govuk-!-font-weight-bold">4 October</span> into the <b>Notes</b> box.
+
+</div>
+<br>
+<form class="form" action="ninoCOPE" method="post">
+<button class="govuk-button" data-module="govuk-button">
+  Back to start
+</button>
+
+
+    </div>
+  </div>
+
+{% endblock %}

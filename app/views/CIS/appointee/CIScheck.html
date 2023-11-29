@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <div class="govuk-panel govuk-panel--confirmation" style="background-color:#1d70b8;">
+    <h1 class="govuk-panel__title">
+      Appointee held
+    </h1>
+    <div class="govuk-panel__body">
+      Porcelain Potts
+    </div>
+    <div class="govuk-panel__body">
+      Born on 15 June 1985
+    </div>
+  </div>
+
+  <br><br>
+
+<h2 class="govuk-heading-m">Correct appointee?</h2>
+
+  <form class="form" action="/NameNINO-answer" method="post">
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+idPrefix: "Name-NINO",
+name: "Name-NINO",
+fieldset: {
+legend: {
+isPageHeading: true,
+classes: "govuk-fieldset__legend--l"
+
+}
+},
+hint: {
+},
+items: [
+{
+value: "Yes",
+text: "Yes",
+checked: checked("Name-NINO", "/CIS_journey/how_can_help1")
+},
+{
+value: "No",
+text: "No",
+checked: checked("Name-NINO", "/CIS_journey/NINOstart")
+}
+]
+}) }}
+
+
+<br><br>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+<br>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

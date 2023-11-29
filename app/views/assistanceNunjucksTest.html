@@ -1,0 +1,129 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+
+    <a href="/route" class="govuk-back-link">Back</a>
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/format-answer" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+         <h1 class="govuk-fieldset__heading">
+                        Please select an option?
+                      </h1>
+                      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+                      {% set emailHtml %}
+                      {{ govukInput({
+                        id: "contact-by-email",
+                        name: "contact-by-email",
+                        type: "email",
+                        autocomplete: "email",
+                        spellcheck: false,
+                        classes: "govukCheckboxes",
+                        label: {
+
+                        },
+                        errorMessage: {
+                          text: "Email address cannot be blank"
+                        }
+                      }) }}
+                      {% endset -%}
+
+                      {% set phoneHtml %}
+                      {{ govukInput({
+                        id: "contact-by-phone",
+                        name: "contact-by-phone",
+                        type: "tel",
+                        autocomplete: "tel",
+                        classes: "govuk-!-width-one-third",
+                        label: {
+                          text: "Phone number"
+                        }
+                      }) }}
+                      {% endset -%}
+
+                      {% set textHtml %}
+                      {{ govukInput({
+                        id: "contact-by-text",
+                        name: "contact-by-text",
+                        type: "tel",
+                        autocomplete: "tel",
+                        classes: "govuk-checkboxes",
+                        label: {
+                          text: "Mobile phone number"
+                        }
+                      }) }}
+                      {% endset -%}
+
+                      {{ govukRadios({
+                        name: "contact",
+                        fieldset: {
+                          legend: {
+                            text: "How would you prefer to be contacted?",
+                            isPageHeading: true,
+                            classes: "govuk-fieldset__legend--l"
+                          }
+                        },
+                        hint: {
+                          text: "Select one option."
+                        },
+                        items: [
+                          {
+                            value: "email",
+                            text: "Email",
+                            conditional: {
+                              html: emailHtml
+                            }
+                          },
+                          {
+                            value: "phone",
+                            text: "Phone",
+                            conditional: {
+                              html: phoneHtml
+                            }
+                          },
+                          {
+                            value: "text",
+                            text: "Text message",
+                            conditional: {
+                              html: textHtml
+                            }
+                          }
+                        ]
+                      }) }}
+
+<br>
+<br>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+
+
+
+
+
+
+{% endblock %}

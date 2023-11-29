@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="check" method="post">
+      <h1 class="govuk-heading-l" style="margin-bottom:10px">
+        You have insufficient access level to view this record
+      </h1>
+<br>
+<p>You are accessing details for a nationally sensitive person but do no have the required access level</p>
+<p>You have to continue with manual data capture</p>
+
+<br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

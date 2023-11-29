@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="MBquestion" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+            <h1 class="govuk-fieldset__heading">
+              How can I help you today?
+            </h1>
+          </legend>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="access-no" name="type" type="radio" value="main" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="access-no">
+              State Pension forecast
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="access-no2" name="type" type="radio" value="third" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="access-no2">
+              Forecast enquiry
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                       For example, voluntary contributions
+                     </div>
+            </div>
+
+
+
+        </fieldset>
+      </div>
+
+
+<br><br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

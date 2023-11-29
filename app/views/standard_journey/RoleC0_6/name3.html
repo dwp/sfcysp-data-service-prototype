@@ -1,0 +1,87 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-l" style="margin-bottom:30px">
+         I just need some contact details so we can post the forecast
+      </h1>
+
+      <h2 class="govuk-heading-m" style="margin-bottom:15px">
+         Third party details
+      </h2>
+      <div id="passport-issued-hint" class="govuk-hint">
+            Enter the first name and last name and/or the company or organisation name.
+          </div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  First name
+</label>
+<input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Derek">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  Last name
+</label>
+<input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Bowen">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  Company or organisation name (optional)
+</label>
+<input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="">
+</div>
+<br>
+
+<h2 class="govuk-heading-m" style="margin-bottom:15px">
+   The person you represent
+</h2>
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+First name
+</label>
+<input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="John Eduardo">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+Last name
+</label>
+<input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Smith">
+</div>
+
+
+<br>
+
+
+<div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+     <label class="govuk-label govuk-checkboxes__label" for="waste">
+       Welsh language forecast requested
+     </label>
+   </div>
+
+    <br><br><br>
+<form class="form" action="address2" method="post">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

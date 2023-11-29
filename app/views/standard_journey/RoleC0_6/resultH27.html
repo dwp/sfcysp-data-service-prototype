@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-l" style="margin-bottom: 30px">
+        Can I take the first line of your address?
+      </h1>
+
+  <p class="govuk-body" style="margin-bottom: 10px"><span class="govuk-!-font-weight-bold" ">Postcode:</span>G42 9BT</p>
+<a href="postcode" class="govuk-link">Change</a>
+<br><br><br>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select an address
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>12 addresses found</option>
+          <option value="">2a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">2b Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">4a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">4b Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">6a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">6b Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">8a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">8b Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">10a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">10b Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">12a Dundee Bee Road, Hull, H27 3OT</option>
+          <option value="">12b Dundee Bee Road, Hull, H27 3OT</option>
+                </select>
+      </div>
+
+
+<br><br>
+<form class="form" action="preview_tp" method="post">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+<a href="edit-new" class="govuk-link">Address not on the list</a>
+    </div>
+  </div>
+
+{% endblock %}

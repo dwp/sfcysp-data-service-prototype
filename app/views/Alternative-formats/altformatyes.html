@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="altformat">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+
+      <form class="form" action="/altformatjourney-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "altformat-journey",
+    name: "altformat-journey",
+    fieldset: {
+      legend: {
+        text: "How do you want us to send your State Pension forecast?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+
+      }
+    },
+    hint: {
+      text: "Select one option"
+    },
+    items: [
+    {
+      value: "Large print",
+      text: "Large print",
+      checked: checked("altformat-journey", "Large print")
+  },
+  {
+      value: "Coloured paper",
+      text: "Coloured paper",
+      checked: checked("altformat-journey", "Coloured paper")
+  },
+  {
+      value: "Large print and coloured paper",
+      text: "Large print and coloured paper",
+      checked: checked("altformat-journey", "Large print and coloured paper")
+  },
+  {
+      value: "Audio format (cassette, CD, DVD or MP3)",
+      text: "Audio format (cassette, CD, DVD or MP3)",
+      checked: checked("altformat-journey", "Audio format (cassette, CD, DVD or MP3)")
+  },
+  {
+      value: "Braille",
+      text: "Braille",
+      checked: checked("altformat-journey", "Braille")
+  },
+  {
+      value: "British Sign Language (Mpeg or DVD)",
+      text: "British Sign Language (Mpeg or DVD)",
+      checked: checked("altformat-journey", "British Sign Language (Mpeg or DVD)")
+  },
+  {
+      value: "Something else",
+      text: "Something else",
+      checked: checked("altformat-journey", "Something else")
+  }
+    ]
+  }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

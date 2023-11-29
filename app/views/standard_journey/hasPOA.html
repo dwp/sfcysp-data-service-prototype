@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-width-container ">
+  <nav><a href="/standard_journey/assistance" class="govuk-back-link">Back</a>
+</nav>
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" action="/has_POA" method="post">
+
+  <p class="govuk-caption-l govuk-!-margin-top-0">QQ 12 23 34 C</p>
+
+  <div class="govuk-form-group govuk-!-margin-bottom-7">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-4">
+  <h1 class="govuk-fieldset__heading">
+    Are you requesting your own forecast?
+  </h1>
+</legend>
+<div class="govuk-radios govuk-radios__conditional--class-override" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="recipient" name="recipient" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="recipient">
+      Yes
+    </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="recipient-2" name="recipient" type="radio" value="no" aria-controls="conditional-recipient-2" aria-expanded="false">
+        <label class="govuk-label govuk-radios__label" for="recipient-2">
+      No
+    </label>
+      </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-recipient-2">
+            <p class="govuk-body">Access <span class="govuk-!-font-weight-bold">Searchlight</span> using the customer's National Insurance number.<br>Check whether the customer has a legal representative.</p>
+
+        </div>
+</div>
+
+</fieldset>
+</div>
+
+
+
+
+
+
+
+  <button class="govuk-button" data-module="govuk-button" id="continue">
+Continue
+</button>
+</form>
+  </div>
+</div>
+      </main>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

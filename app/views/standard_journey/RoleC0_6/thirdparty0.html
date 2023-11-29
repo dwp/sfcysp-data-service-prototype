@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="name2" method="post">
+      <h1 class="govuk-heading-l" style="margin-bottom:10px">
+        Send letter to customer and third party
+      </h1>
+<div class="govuk-inset-text">
+  Send <span class="govuk-body govuk-!-font-weight-bold">BR19 third party rejection letter</span> to third party representarive.<br><br>
+  <span class="govuk-body govuk-!-font-weight-bold">Send State Pension forecast to the customer.</span> <br><br>
+  If third party asks how to be the customer's legal representative, send <span class="govuk-body govuk-!-font-weight-bold">BR19 third request letter </span>.
+</div>
+
+<br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}

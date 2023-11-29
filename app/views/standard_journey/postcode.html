@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <a href="/standard_journey/name" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="resultAB24" method="post">
+        <div class="govuk-form-group">
+          <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+               What is your postcode?
+            </label>
+          </h1>
+          <br>
+          <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" style="text-transform: uppercase">
+          <br><br><a href="overseas" class="govuk-link">They live overseas</a>
+              </div>
+
+        <br><br>
+        <a href="/standard_journey/postcodeResults" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Find address
+
+        </a>
+    </form>
+  <br><br>
+  <div>
+{% endblock %}

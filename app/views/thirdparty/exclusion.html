@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">NI number: AA 12 34 56 C</span>
+      <h1 class="govuk-heading-xl">
+        Customer over State Pension age
+      </h1>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            For the customer
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+    I can see you are over State Pension age. To check your State Pension, you need to call the pension centre. I’ve got the number here for you.
+            </p>
+            <p class="govuk-notification-banner__heading">
+      I can see you are over State Pension age. To check your State Pension, you need to call the pension centre. I’ve got the number here for you.
+              </p>
+              <p class="govuk-notification-banner__heading">
+  Where are you calling from today?
+              </p>
+
+              <p>
+                UK (Excluding Northern Ireland): 0800 731 7898 <br>
+    Text phone: 0800 731 7339 <br>
+    Relay UK (For those that cannot hear or speak on the phone): Dial 18001 0800 731 0469
+              </p>
+            <p>
+              International: +44 (0) 191 218 7777 <br>
+  Text phone: +44 (0) 191 218 7280
+            </p>
+
+            <p>
+              Northern Ireland: 0808 100 2658 <br>
+              Text phone: 0808 100 2198
+            </p>
+
+        </div>
+      </div>
+
+      <div class="govuk-inset-text">
+<span class="govuk-body govuk-!-font-weight-bold">BR19 process:</span> Go to <span class="govuk-body govuk-!-font-weight-bold">‘The Hub’</span> and send the customer the appropriate letter from <span class="govuk-body govuk-!-font-weight-bold">‘call/clerical’</span>.
+</div>
+<br>
+
+
+<br>
+<form class="form" action="../../UTscenarios" method="post">
+<button class="govuk-button" data-module="govuk-button">
+  Back to start
+</button>
+</form>
+<br>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

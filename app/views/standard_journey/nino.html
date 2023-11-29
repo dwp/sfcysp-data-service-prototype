@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-header__content">
+
+   <a href="/" class="govuk-header__link govuk-header__link--service-name">
+     Support for Check your State Pension forecast
+   </a>
+
+
+   </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Enter a National Insurance Number 
+
+
+
+      <div class="govuk-form-group">
+        <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+      </div>
+
+          <a href="/standard_journey/route" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Continue
+
+          </a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="addcheck" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+            <h1 class="govuk-fieldset__heading">
+              What is your UK address?
+            </h1>
+          </legend>
+
+
+
+          <div class="govuk-inset-text">
+            <p>38 Session Road<br>
+            Tamworth<br>
+            B79 7JT<br>
+            United Kingdom</p>
+          </div>
+        <br>
+
+        <!-- <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="main" name="type" type="radio" value="main">
+                <label class="govuk-label govuk-radios__label" for="main">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="third" name="type" type="radio" value="third">
+                <label class="govuk-label govuk-radios__label" for="third">
+                No
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+        Access <span class="govuk-body govuk-!-font-weight-bold">Searchlight</span> using the customer's National insruance number. <br>
+        Check whether the customer has a legal representative.
+        </div>
+              </div>
+
+            </div> -->
+
+
+
+        </fieldset>
+      </div>
+
+
+<br><br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue as address correct
+          </button>
+<br>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Address incorrect
+</button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}
