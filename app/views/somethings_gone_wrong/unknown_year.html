@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="NINOstart_sgw4" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">NI number: QQ 12 34 56 C</span>
+      <h1 class="govuk-heading-xl">
+        We need more information
+      </h1>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Tell the customer
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            We need more information from HMRC.
+            </p>
+            <p class="govuk-notification-banner__heading">
+            This means I’m unable to send you a forecast today.
+            </p>
+            <p class="govuk-notification-banner__heading">
+            Can I just confirm some details with you now?
+            </p>
+            <p class="govuk-notification-banner__heading">
+            I'll send your details to HMRC. Your forecast will be sent out in the next 2-3 weeks.
+            </p>
+
+
+        </div>
+      </div>
+
+      <div class="govuk-inset-text">
+    <p class="govuk-body govuk-!-font-weight-regular">    <span class="govuk-body govuk-!-font-weight-bold">FPC1 process:</span> Check NIRS Liabilities for an open Full Time Education entry. <br>
+      Add customer’s title, name, National Insurance number, contact number, date of birth and address.
+<br>
+      Select <span class="govuk-body govuk-!-font-weight-bold">Specialist</span> as the department and <span class="govuk-body govuk-!-font-weight-bold">Somethings Gone Wrong</span> as the category.</p>
+      <p class="govuk-body govuk-!-font-weight-regular"> Add   <span class="govuk-body govuk-!-font-weight-bold">Unknown if year 2023-23 is to be treated as a gap or a qualifying year</span> in the <span class="govuk-body govuk-!-font-weight-bold">Notes</span> box.</p>
+
+
+</div>
+<br>
+<form class="form" action="NINOstart_sgw4" method="post">
+<button class="govuk-button" data-module="govuk-button">
+  Back to start
+</button>
+
+
+    </div>
+  </div>
+
+{% endblock %}
