@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/somethings_gone_wrong/route" method="post">
+      <h1 class="govuk-heading-l" style="margin-bottom:10px">
+        Can I take your National Insurance number?
+      </h1>
+      <div id="sign-in-item-hint" class="govuk-hint">
+                It's on your National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'
+              </div>
+              <br>
+      <div class="govuk-form-group">
+      <input class="govuk-input govuk-input--width-20" id="number" name="number" type="text">
+      </div>
+
+
+
+
+<br><br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+</form>
+    </div>
+  </div>
+
+{% endblock %}
