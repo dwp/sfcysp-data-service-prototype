@@ -101,11 +101,11 @@ router.post('/NameNINO-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (nameNINO == "Yes"){
     // Send user to next page
-    res.redirect('/CIS_journey/how_can_help1')
+    res.redirect('/Modelling_errors_testing/index2')
   }
   if (nameNINO == "No"){
     // Send user to next page
-    res.redirect('/CIS_journey/NINOstart')
+    res.redirect('/Modelling_errors_testing/NINOstart')
   }
 })
 
