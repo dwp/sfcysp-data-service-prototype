@@ -1,0 +1,443 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container ">
+
+  <a href="/standard_journey/route" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl" style="margin-bottom:10px">
+    Forecast information for <br>QQ 12 23 34 C
+    </h1>
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Overview
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ol class="app-task-list">
+                        <li>
+
+
+                        <li>
+
+                          <ul class="app-task-list__items" style="padding-left:0">
+                            <li class="app-task-list__item">
+
+                                  State pension date
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">21 September 2052</strong>
+                            </li>
+                            <!-- <li class="app-task-list__item">
+
+                                  State pension age
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">68</strong>
+                            </li> -->
+                            <li class="app-task-list__item">
+
+                                  Final relevant year
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">2051-52 (30 years to FRY)</strong>
+                            </li>
+
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Estimate up to 5 April 2021
+                              </span>
+                              <strong class="govuk-tag govuk-tag-blue app-task-list__tag" id="medical-information-status">£73.80 a week</strong>
+                            </li>
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Qualifying years
+                              </span>
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">14</strong>
+                            </li>
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Most they can get
+                              </span>
+                              <strong class="govuk-tag govuk-tag-blue app-task-list__tag" id="medical-information-status">£179.60 a week</strong>
+                            </li>
+
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Forecast
+                              </span>
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">£179.60 (21 years needed) a week</strong>
+                            </li>
+
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Cope estimate:
+                              </span>
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">£6.98 a week</strong>
+                              <!-- <br><details class="govuk-details" data-module="govuk-details" style="margin-bottom:0px">
+                                <summary class="govuk-details__summary">
+                                  <span class="govuk-details__summary-text">
+                                    Contracting out explanation
+                                  </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                There is a COPE figure on your forecast. This is just to indicate that you will be getting some money from a work-based pension scheme as well as your State Pension. This is because, like most people, you were contracted-out (of the additional State Pension system) for the time you were in a work-based pension scheme. People who were not in a work-based pension scheme will not be getting these sorts of private pension scheme payments.
+                                </div>
+                              </details> -->
+                            </li>
+                          </ul>
+                        </li>
+
+                      </ol>
+              </div>
+            </div>
+            <!-- <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    Modelling
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <p class='govuk-body'>Content</p>
+              </div>
+            </div> -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    Improve State Pension
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                <strong class="govuk-tag govuk-tag--grey" id="company-information-status">Future and past years available</strong>
+                <br><br><br>
+
+                <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend">
+    Is the customer still contributing National Insurance?
+  </legend>
+  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <label class="govuk-label govuk-radios__label" for="contact">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+
+              <legend class="govuk-fieldset__legend">
+                What date will they stop?
+              </legend>
+              <div id="passport-issued-hint" class="govuk-hint">
+Customer is State Pension age on 21 September 2052
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+
+        </div>
+
+
+  </div>
+
+  <br>
+
+</fieldset>
+<br>
+<form class="form" action="improve" method="post">
+<button class="govuk-button" data-module="govuk-button">
+Calculate
+</button>
+</form>
+<br>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    National Insurance summary
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+<strong class="govuk-tag govuk-tag--grey" id="company-information-status">4 years can be filled</strong>
+<!-- <p class='govuk-body'>1 year can be filled</p> -->
+<div class="govuk-inset-text">
+  <p class='govuk-body' style="margin-bottom:10px">14 years of full contributions</p>
+  <p class='govuk-body' style="margin-bottom:10px">31 years to contribute before 5 April 2052</p>
+  <p class='govuk-body'>7 years with a gap</p>
+</div>
+<table class="govuk-table">
+  <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Years</th>
+      <th scope="col" class="govuk-table__header">Gaps in record</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">2021-2022</td>
+      <td class="govuk-table__cell">Not available yet</td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">2009-2010</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange" id="company-information-status">£354.20</strong></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">2008-2009</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange" id="company-information-status">£264.40</strong></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">2007-2008</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange" id="company-information-status">£354.30</strong></td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">2006-2007</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange" id="company-information-status">£477.40</strong></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    Starting amounts
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <div class="govuk-inset-text" style="margin-top: 0px;">
+                  Starting amount at April 2016 is £85.31 a week
+                </div>
+                <ol class="app-task-list">
+                        <li>
+
+
+                        <li>
+<p class="govuk-body govuk-!-font-weight-bold">Old rules</p>
+                          <ul class="app-task-list__items" style="padding-left:0">
+                            <li class="app-task-list__item">
+
+                                  Basic
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">£83.51 a week</strong>
+                            </li>
+                            <!-- <li class="app-task-list__item">
+
+                                  State pension age
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">68</strong>
+                            </li> -->
+                            <li class="app-task-list__item">
+
+                                  Additional Pension and GRAD
+
+                              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">£1.80 a week</strong>
+                            </li>
+
+                            <li class="app-task-list__item">
+                              <span class="app-task-list__task-name">
+                                Total
+                              </span>
+                              <strong class="govuk-tag govuk-tag-blue app-task-list__tag" id="medical-information-status">£85.31 a week</strong>
+                            </li>
+
+
+
+
+                          </ul>
+                        </li>
+
+                      </ol>
+                      <ol class="app-task-list">
+                              <li>
+
+
+                              <li>
+    <p class="govuk-body govuk-!-font-weight-bold">New rules</p>
+                                <ul class="app-task-list__items" style="padding-left:0">
+                                  <li class="app-task-list__item">
+
+                                        New State Pension
+
+                                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">£93.39 a week</strong>
+                                  </li>
+                                  <!-- <li class="app-task-list__item">
+
+                                        State pension age
+
+                                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">68</strong>
+                                  </li> -->
+                                  <li class="app-task-list__item">
+
+                                        RDA
+
+                                    <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">£8.30 a week</strong>
+                                  </li>
+
+                                  <li class="app-task-list__item">
+                                    <span class="app-task-list__task-name">
+                                      Total
+                                    </span>
+                                    <strong class="govuk-tag govuk-tag-blue app-task-list__tag" id="medical-information-status">£85.09 a week</strong>
+                                  </li>
+
+
+
+
+                                </ul>
+                              </li>
+
+                            </ol>
+              </div>
+
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                      Pre deadline Gaps
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+  <strong class="govuk-tag govuk-tag--grey" id="company-information-status">4 years can be filled</strong>
+  <!-- <p class='govuk-body'>1 year can be filled</p> -->
+  <div class="govuk-inset-text">
+    <p class='govuk-body' style="margin-bottom:10px">14 years of full contributions</p>
+    <p class='govuk-body' style="margin-bottom:10px">31 years to contribute before 5 April 2052</p>
+    <p class='govuk-body'>7 years with a gap</p>
+  </div>
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Years</th>
+        <th scope="col" class="govuk-table__header">Full or Partial Year payment</th>
+  
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2021-2022</td>
+        <td class="govuk-table__cell">Not available yet</td>
+  
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2009-2010</td>
+        <td class="govuk-table__cell"><strong id="company-information-status">partial</strong></td>
+  
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2008-2009</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">full</strong></td>
+  
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2007-2008</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">full</strong></td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2006-2007</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">partial</strong></td>
+  
+      </tr>
+  
+    </tbody>
+  </table>
+  
+  <br>
+                </div>
+              </div>
+
+
+  <br>
+
+
+              </div>
+
+            </div>
+          </div>
+
+          <br><br>
+          <form class="form" action="route" method="post">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Back to start
+                    </button>
+          </form>
+
+<!-- <form class="form" action="over_pension_age2_2/NI" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">
+          Start now
+        </button>
+</form> -->
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
