@@ -188,7 +188,7 @@ Customer is State Pension age on 21 September 2052
 
 </fieldset>
 <br>
-<form class="form" action="starting_amount" method="post">
+<form class="form" action="improve" method="post">
 <button class="govuk-button" data-module="govuk-button">
 Calculate
 </button>
@@ -210,14 +210,14 @@ Calculate
 <div class="govuk-inset-text">
   <p class='govuk-body' style="margin-bottom:10px">14 years of full contributions</p>
   <p class='govuk-body' style="margin-bottom:10px">31 years to contribute before 5 April 2052</p>
-  <p class='govuk-body'>7 years with a shortfall</p>
+  <p class='govuk-body'>7 years with a gap</p>
 </div>
 <table class="govuk-table">
   <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Years</th>
-      <th scope="col" class="govuk-table__header">Shortfalls in record</th>
+      <th scope="col" class="govuk-table__header">Gaps in record</th>
 
     </tr>
   </thead>
@@ -350,23 +350,151 @@ Calculate
               </div>
 
             </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                      Pre deadline Gaps
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+  <strong class="govuk-tag govuk-tag--grey" id="company-information-status">4 years can be filled</strong>
+  <!-- <p class='govuk-body'>1 year can be filled</p> -->
+  <div class="govuk-inset-text">
+    <p class='govuk-body' style="margin-bottom:10px">14 years of full contributions</p>
+    <p class='govuk-body' style="margin-bottom:10px">31 years to contribute before 5 April 2052</p>
+    
+  </div>
+  <table class="govuk-table">
+    <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Years</th>
+        <th scope="col" class="govuk-table__header">Cost</th>
+        <th scope="col" class="govuk-table__header">Amount</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2021-2022</td>
+        <td class="govuk-table__cell">Not available yet</td>
+        <td class="govuk-table__cell"></td>
+  
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2009-2010</td>
+        <td class="govuk-table__cell"><strong id="company-information-status">Manual Calc Req</strong></td>
+        <td class="govuk-table__cell">
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2008-2009</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">£824.20</strong></td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2007-2008</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">£824.20</strong></td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+  
+      <tr class="govuk-table__row">
+        <td scope="row" class="govuk-table__cell">2006-2007</td>
+        <td class="govuk-table__cell"><strong  id="company-information-status">Manual Calc Req</strong></td>
+        <td class="govuk-table__cell">
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+          </div>
+        </td>
+      </tr>
+  
+    </tbody>
+  </table>
+  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+
+    <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend">
+Is the customer still contributing National Insurance?
+</legend>
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+<label class="govuk-label govuk-radios__label" for="contact">
+Yes
+</label>
+</div>
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+
+  <legend class="govuk-fieldset__legend">
+    What date will they stop?
+  </legend>
+  <div id="passport-issued-hint" class="govuk-hint">
+Customer is State Pension age on 21 September 2052
+  </div>
+  <div class="govuk-date-input" id="passport-issued">
+
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+  </div>
+</fieldset>
+
+</div>
+</div>
+
+<div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+  <label class="govuk-label govuk-radios__label" for="contact-2">
+    No
+  </label>
+
+</div>
 
 
+</div>
+<br><br>
 
-  <br>
+<form class="form" action="improve" method="post">
+  <button class="govuk-button" data-module="govuk-button">
+  Calculate
+  </button>
 
 
               </div>
 
             </div>
+          </form>
+        </div>
+      </div>
+
+      <form class="form" action="route" method="post">
+        <button class="govuk-button" data-module="govuk-button">
+          Back to start
+        </button>
+</form>
+<br>
           </div>
 
           <br><br>
-          <form class="form" action="route" method="post">
-                    <button class="govuk-button" data-module="govuk-button">
-                      Back to start
-                    </button>
-          </form>
 
 <!-- <form class="form" action="over_pension_age2_2/NI" method="post">
 
