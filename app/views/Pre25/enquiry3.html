@@ -43,12 +43,12 @@
 
                               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="company-information-status">21 September 2052</strong>
                             </li>
-                            <!-- <li class="app-task-list__item">
+                          <li class="app-task-list__item">
 
                                   State pension age
 
                               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status">68</strong>
-                            </li> -->
+                            </li>
                             <li class="app-task-list__item">
 
                                   Final relevant year
@@ -88,7 +88,7 @@
                                 Cope estimate:
                               </span>
                               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">£6.98 a week</strong>
-                              <!-- <br><details class="govuk-details" data-module="govuk-details" style="margin-bottom:0px">
+                              <br><details class="govuk-details" data-module="govuk-details" style="margin-bottom:0px">
                                 <summary class="govuk-details__summary">
                                   <span class="govuk-details__summary-text">
                                     Contracting out explanation
@@ -97,7 +97,7 @@
                                 <div class="govuk-details__text">
                                 There is a COPE figure on your forecast. This is just to indicate that you will be getting some money from a work-based pension scheme as well as your State Pension. This is because, like most people, you were contracted-out (of the additional State Pension system) for the time you were in a work-based pension scheme. People who were not in a work-based pension scheme will not be getting these sorts of private pension scheme payments.
                                 </div>
-                              </details> -->
+                              </details>
                             </li>
                           </ul>
                         </li>
@@ -105,95 +105,83 @@
                       </ol>
               </div>
             </div>
-            <!-- <div class="govuk-accordion__section ">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    Modelling
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <p class='govuk-body'>Content</p>
-              </div>
-            </div> -->
+
             <div class="govuk-accordion__section ">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                    Improve State Pension
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                <strong class="govuk-tag govuk-tag--grey" id="company-information-status">Future and past years available</strong>
-                <br><br><br>
-
-                <fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend">
-    Is the customer still contributing National Insurance?
-  </legend>
-  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-    <div class="govuk-radios__item">
-
-          <input class="govuk-radios__input" id="model" name="contact" type="radio" value="email" data-aria-controls="conditional-model">
-          <label class="govuk-label govuk-radios__label" for="model">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-
-              <legend class="govuk-fieldset__legend">
-                What date will they stop?
-              </legend>
-              <div id="passport-issued-hint" class="govuk-hint">
-Customer is State Pension age on 21 September 2052
-              </div>
-              <div class="govuk-date-input" id="passport-issued">
-
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                      Improve State Pension
+                    </span>
+                  </h2>
                 </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-                </div>
-              </div>
-            </fieldset>
-
+                <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                  <strong class="govuk-tag govuk-tag--grey" id="company-information-status">Future and past years available</strong>
+                  <br><br><br>
+  
+                  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Is the customer still contributing National Insurance?
+    </legend>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact">
+              Yes
+            </label>
           </div>
-
-        </div>
-
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="model-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-model-2">
-          <label class="govuk-label govuk-radios__label" for="model-2">
-            No
-          </label>
-
-        </div>
-
-
-  </div>
-
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+  
+                <legend class="govuk-fieldset__legend">
+                  What date will they stop?
+                </legend>
+                <div id="passport-issued-hint" class="govuk-hint">
+  Customer is State Pension age on 21 September 2052
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+  
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                </div>
+              </fieldset>
+  
+            </div>
+  
+          </div>
+  
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="contact-2">
+              No
+            </label>
+  
+          </div>
+  
+  
+    </div>
+  
+    <br>
+  
+  </fieldset>
   <br>
-
-</fieldset>
-<br>
-<form class="form" action="improve" method="post">
-<button class="govuk-button" data-module="govuk-button">
-Calculate
-</button>
-</form>
+  <form class="form" action="improve" method="post">
+  <button class="govuk-button" data-module="govuk-button">
+  Calculate
+  </button>
+  </form>
 <br>
               </div>
             </div>
@@ -421,7 +409,7 @@ Calculate
 
 
 
-<form class="form" action="enquiry_results" method="post">
+<form class="form" action="enquiry3_results" method="post">
   <button class="govuk-button" data-module="govuk-button">
   Calculate
   </button>
