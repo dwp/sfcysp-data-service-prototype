@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container ">
+
+  <a href="/Pre25/enquiry3_results" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+      <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend">
+  <h1 class="govuk-heading-l">
+Is the customer still contributing National Insurance?<h1>
+</legend>
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+<label class="govuk-label govuk-radios__label" for="contact">
+  Yes
+</label>
+</div>
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+
+    <legend class="govuk-fieldset__legend">
+      What date will they stop?
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+Customer is State Pension age on 21 September 2052
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+  </fieldset>
+
+</div>
+
+</div>
+</div>
+
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact">
+<label class="govuk-label govuk-radios__label" for="contact">
+  No
+</label>
+<br>
+</fieldset>
+<br>
+<form class="form" action="improve" method="post">
+    <button class="govuk-button" data-module="govuk-button">
+    Calculate
+    </button>
+    </form>
+</div>
+
+
+</div>
+
+<br>
+
+
+<br>
+
+<br>
+
+          </div>
+          </div>
+
+          <br><br>
+
+<!-- <form class="form" action="over_pension_age2_2/NI" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">
+          Start now
+        </button>
+</form> -->
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
